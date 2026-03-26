@@ -1,18 +1,10 @@
 import streamlit as st
 import pickle
 import pandas as pd
-import os
 
-# -------------------------------
-# Load model and columns safely
-# -------------------------------
-BASE_DIR = os.path.dirname(__file__)
-
-model_path = os.path.join(BASE_DIR, "model.pkl")
-columns_path = os.path.join(BASE_DIR, "columns.pkl")
-
-model = pickle.load(open(model_path, "rb"))
-columns = pickle.load(open(columns_path, "rb"))
+# Load model and columns (simple way)
+model = pickle.load(open("model.pkl", "rb"))
+columns = pickle.load(open("columns.pkl", "rb"))
 
 # -------------------------------
 # App Title
